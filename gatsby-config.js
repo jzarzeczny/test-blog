@@ -2,5 +2,5 @@ module.exports = {
   siteMetadata: {
     title: "psychodelikt",
   },
-  plugins: ["gatsby-plugin-gatsby-cloud"],
+  plugins: ["gatsby-plugin-gatsby-cloud", "gatsby-plugin-material-ui"],
 };
