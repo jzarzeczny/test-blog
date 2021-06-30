@@ -11,6 +11,7 @@ import {
   ListItemText,
   Divider,
   Hidden,
+  Container,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/styles";
@@ -93,7 +94,7 @@ export default function NavBar() {
   };
 
   return (
-    <div>
+    <Container>
       <AppBar postion="static" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <Button variant="contained" color="secondary">
@@ -151,6 +152,6 @@ export default function NavBar() {
           ))}
         </List>
       </Drawer>
-    </div>
+    </Container>
   );
 }
