@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/styles";
 import MainPost from "../components/MainPost";
 import GridOfPosts from "../components/GridOfPosts";
 import Layout from "../components/Layout";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
