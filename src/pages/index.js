@@ -1,21 +1,17 @@
 import React from "react";
 import "@fontsource/roboto";
-import { graphql } from "gatsby";
 import {
   Container,
   ThemeProvider,
   Typography,
-  CardMedia,
-  Card,
-  CardContent,
-  CardActions,
-  Button,
   Paper,
+  Grid,
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import NavBar from "../Components/Navbar";
-import { CardActionArea } from "gatsby-material-ui-components";
 import Icon from "../assets/thinking.svg";
+import MainPost from "../Components/MainPost";
+import GridOfPosts from "../Components/GridOfPosts";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,9 +27,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: "flex-start",
   },
-  logoSection: {
-    flexGrow: 1,
-  },
+
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -54,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   logoText: {
     marginRight: 20,
+  },
+  paper: {
+    padding: 12,
   },
 
   toolbar: theme.mixins.toolbar,
@@ -76,32 +73,13 @@ export default function Home({ data }) {
                 PSYCHODELIKT
               </Typography>
             </Paper>
-            <Paper elevation={2}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia />
-                  <CardContent>
-                    <Typography variant="h5" component="h3">
-                      Motywacja, jako siła napędowa
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Id maxime rem iste explicabo aut optio natus eos rerum
-                      fugit vero, recusandae, debitis earum quidem at nisi hic
-                      harum laudantium vel?
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button size="medium" color="secondary">
-                    Więcej
-                  </Button>
-                </CardActions>
-              </Card>
+            <MainPost />
+            <Paper elevation={3}>
+              <Grid container spacing={3} className={classes.paper}>
+                <GridOfPosts />
+                <GridOfPosts />
+                <GridOfPosts />
+              </Grid>
             </Paper>
           </Container>
         </main>
@@ -109,11 +87,3 @@ export default function Home({ data }) {
     </div>
   );
 }
-
-export const query = graphql`
-  query Img {
-    file(relativePath: { eq: "thinking.png" }) {
-      id
-    }
-  }
-`;
