@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-material-ui",
     `gatsby-theme-material-ui`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
