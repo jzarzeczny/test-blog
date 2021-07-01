@@ -121,7 +121,7 @@ export default function NavBar() {
                     navigate(item.path);
                   }}
                 >
-                  <ListItemIcon>{item.icon}</ListItemIcon>
+                  <ListItemIcon large>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItem>
               ))}
