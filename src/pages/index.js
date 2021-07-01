@@ -2,8 +2,7 @@ import React from "react";
 import "@fontsource/roboto";
 import { Paper, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import MainPost from "../components/MainPost";
-import GridOfPosts from "../components/GridOfPosts";
+import PostOnMain from "../components/PostOnMain";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 
@@ -15,15 +14,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.nodes;
-  console.log(posts);
+  const [lastPost, ...oldPosts] = posts;
+
   const classes = useStyles();
+
   return (
     <Layout>
-      <MainPost />
+      <Paper elevation={2} className={classes.paper}>
+        <PostOnMain frontmatter={lastPost.frontmatter} />
+      </Paper>
       <Paper elevation={3}>
         <Grid container spacing={3} className={classes.paper}>
-          {posts.map((post) => (
-            <GridOfPosts frontmatter={post.frontmatter} />
+          {oldPosts.map((post) => (
+            <Grid item xs={12} md={6}>
+              <PostOnMain frontmatter={post.frontmatter} />
+            </Grid>
           ))}
         </Grid>
       </Paper>

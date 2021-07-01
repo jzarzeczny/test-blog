@@ -2,8 +2,7 @@
 title: Second sexy post
 tags: Second
 slug: second-sexy-post
-date: 2021-03-01T00:00:00+00:00
-img: ../images/eggs.jpg
+date: "2020-05-06"img: ../images/eggs.jpg
 ---
 
 # Lorem

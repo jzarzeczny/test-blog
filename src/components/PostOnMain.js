@@ -1,24 +1,27 @@
 import React from "react";
-import { CardActionArea } from "gatsby-material-ui-components";
 import { StaticImage } from "gatsby-plugin-image";
 import { makeStyles } from "@material-ui/styles";
+import { Link } from "gatsby";
 
-import { Card, CardContent, Paper, Typography } from "@material-ui/core";
+import {
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  CardActionArea,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   image: {
     margin: "0 auto",
     width: "100%",
   },
-  paper: {
-    marginBottom: 24,
-  },
 }));
-export default function MainPost() {
-  const classes = useStyles();
 
+export default function PostOnMain(props) {
+  const classes = useStyles();
   return (
-    <Paper elevation={2} className={classes.paper}>
+    <Link to={"/posts/" + props.frontmatter.slug}>
       <Card>
         <CardActionArea className={classes.actionArea}>
           <StaticImage
@@ -31,7 +34,7 @@ export default function MainPost() {
           ></StaticImage>
           <CardContent>
             <Typography variant="h5" component="h3">
-              Motywacja, jako siła napędowa
+              {props.frontmatter.title}
             </Typography>
             <Typography variant="body1" color="textSecondary" component="p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
@@ -41,6 +44,6 @@ export default function MainPost() {
           </CardContent>
         </CardActionArea>
       </Card>
-    </Paper>
+    </Link>
   );
 }
