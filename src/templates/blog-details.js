@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 
 export default function BlogDetails({ data }) {
   console.log(data);
@@ -7,11 +8,11 @@ export default function BlogDetails({ data }) {
   const { title, tags, img } = data.markdownRemark.frontmatter;
 
   return (
-    <div>
+    <Layout>
       <h1>{title}</h1>
       <p>{tags}</p>
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
-    </div>
+    </Layout>
   );
 }
 

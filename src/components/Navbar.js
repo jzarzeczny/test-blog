@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { navigate } from "gatsby";
 import {
   Button,
   AppBar,
@@ -77,12 +78,12 @@ export default function NavBar() {
     {
       text: "Zacznij tutaj",
       icon: <DeckRoundedIcon color="secondary" />,
-      path: "/",
+      path: "/start",
     },
     {
       text: "Tagi",
       icon: <LabelRoundedIcon color="secondary" />,
-      path: "/",
+      path: "/tags",
     },
   ];
 
@@ -97,7 +98,13 @@ export default function NavBar() {
     <Container>
       <AppBar postion="static" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Psycho-delikt
           </Button>
           <Hidden smDown>
@@ -107,7 +114,13 @@ export default function NavBar() {
               className={classes.buttonGroup}
             >
               {menuItems.map((item) => (
-                <ListItem button key={item.text}>
+                <ListItem
+                  button
+                  key={item.text}
+                  onClick={() => {
+                    navigate(item.path);
+                  }}
+                >
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItem>
@@ -145,7 +158,13 @@ export default function NavBar() {
         <Divider />
         <List>
           {menuItems.map((item) => (
-            <ListItem button key={item.text}>
+            <ListItem
+              button
+              key={item.text}
+              onClick={() => {
+                navigate(item.path);
+              }}
+            >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
