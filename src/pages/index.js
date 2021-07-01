@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: 12,
   },
+  mainPost: {
+    marginBottom: 24,
+  },
 }));
 
 export default function Home({ data }) {
@@ -20,14 +23,17 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Paper elevation={2} className={classes.paper}>
+      <Paper elevation={2} className={(classes.paper, classes.mainPost)}>
         <PostOnMain frontmatter={lastPost.frontmatter} />
       </Paper>
-      <Paper elevation={3}>
+      <Paper elevation={3} className={classes.grid}>
         <Grid container spacing={3} className={classes.paper}>
           {oldPosts.map((post) => (
             <Grid item xs={12} md={6}>
-              <PostOnMain frontmatter={post.frontmatter} />
+              <PostOnMain
+                frontmatter={post.frontmatter}
+                key={post.frontmatter.slug}
+              />
             </Grid>
           ))}
         </Grid>
@@ -46,6 +52,11 @@ export const PostsData = graphql`
           tags
           title
           date(formatString: "DD MMMM YYYY")
+          img {
+            childrenImageSharp {
+              gatsbyImageData(height: 400)
+            }
+          }
         }
       }
     }

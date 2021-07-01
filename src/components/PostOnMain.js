@@ -2,9 +2,8 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { makeStyles } from "@material-ui/styles";
 import { Link } from "gatsby";
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -20,18 +19,29 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PostOnMain(props) {
   const classes = useStyles();
+  const image = props.frontmatter.img.childrenImageSharp[0].gatsbyImageData;
+
   return (
     <Link to={"/posts/" + props.frontmatter.slug}>
       <Card>
         <CardActionArea className={classes.actionArea}>
-          <StaticImage
+          {/* <StaticImage
             className={classes.image}
-            src="../images/people.jpg"
+            src={"../images/" + props.frontmatter.img.relativePath}
             alt="image"
             aspectRatio={16 / 9}
             height={400}
             fit="cover"
-          ></StaticImage>
+          ></StaticImage> */}
+          <GatsbyImage
+            className={classes.image}
+            image={image}
+            alt="some alt for now"
+            alt="image"
+            aspectRatio={16 / 9}
+            height={400}
+            fit="cover"
+          />
           <CardContent>
             <Typography variant="h5" component="h3">
               {props.frontmatter.title}

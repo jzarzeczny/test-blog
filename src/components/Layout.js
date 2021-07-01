@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 20,
   },
   logoText: {
-    marginRight: 20,
+    marginRight: 24,
   },
   paper: {
     padding: 12,

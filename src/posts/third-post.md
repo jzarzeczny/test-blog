@@ -3,7 +3,7 @@ title: Third sexy post
 tags: Third
 slug: third-sexy-post
 date: "2017-05-08"
-img: ../images/eggs.jpg
+img: ../images/people.jpg
 ---
 
 # Lorem
