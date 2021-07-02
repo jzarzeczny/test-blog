@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { makeStyles, Paper, Typography, Divider } from "@material-ui/core";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { ThemeProvider } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   image: {
@@ -12,13 +11,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
   },
   postContainer: {
-    padding: 24,
+    padding: theme.spacing(3),
   },
   postTags: {
     padding: "24px 0",
   },
   postDate: {
-    paddingTop: 24,
+    paddingTop: theme.spacing(3),
   },
 }));
 

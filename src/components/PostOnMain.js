@@ -15,12 +15,10 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     width: "100%",
   },
-  title: {
+  link: {
     textDecoration: "none",
   },
   p: {
-    textDecoration: "none",
-
     margin: "16px 0",
   },
   date: {
@@ -34,7 +32,7 @@ export default function PostOnMain(props) {
   const image = props.frontmatter.img.childrenImageSharp[0].gatsbyImageData;
 
   return (
-    <Link to={"/posts/" + props.frontmatter.slug}>
+    <Link to={"/posts/" + props.frontmatter.slug} className={classes.link}>
       <Card>
         <CardActionArea className={classes.actionArea}>
           <GatsbyImage

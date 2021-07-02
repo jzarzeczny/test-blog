@@ -12,13 +12,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.background.paper,
   },
-  drawerHeader: {
-    display: "flex",
-    alignItems: "center",
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: "flex-start",
-  },
 
   content: {
     flexGrow: 1,
@@ -44,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: 12,
   },
+  footer: {
+    padding: theme.spacing(3),
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
   toolbar: theme.mixins.toolbar,
 }));
@@ -67,6 +66,11 @@ export default function Layout({ children }) {
             {children}
           </Container>
         </main>
+        <footer className={classes.footer}>
+          <Typography variant="body2">
+            Created by: Jakub Zarzeczny, 2021
+          </Typography>
+        </footer>
       </ThemeProvider>
     </div>
   );

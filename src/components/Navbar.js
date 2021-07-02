@@ -121,7 +121,7 @@ export default function NavBar() {
                     navigate(item.path);
                   }}
                 >
-                  <ListItemIcon large>{item.icon}</ListItemIcon>
+                  <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItem>
               ))}
@@ -142,7 +142,7 @@ export default function NavBar() {
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="presistent"
+        variant="temporary"
         anchor="right"
         open={visible}
         className={classes.drawer}

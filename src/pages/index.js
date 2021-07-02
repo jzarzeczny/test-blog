@@ -29,11 +29,8 @@ export default function Home({ data }) {
       <Paper elevation={3} className={classes.grid}>
         <Grid container spacing={3} className={classes.paper}>
           {oldPosts.map((post) => (
-            <Grid item xs={12} md={6}>
-              <PostOnMain
-                frontmatter={post.frontmatter}
-                key={post.frontmatter.slug}
-              />
+            <Grid item xs={12} md={6} key={post.frontmatter.slug}>
+              <PostOnMain frontmatter={post.frontmatter} />
             </Grid>
           ))}
         </Grid>
