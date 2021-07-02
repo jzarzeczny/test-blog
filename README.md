@@ -1,54 +1,49 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Blog Psychodelikt
 
-## 🚀 Quick start
+## Overview
 
-1.  **Create a Gatsby site.**
+### The challange
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Main idea was to create some simple blog with basic features to train GatsbyJS and try MaterialUI.
+In addition I decided to aim for features within the learning time:
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Current development stage is: **Level 1**
 
-2.  **Start developing.**
+### Links
 
-    Navigate into your new site’s directory and start it up.
+- Live site: [Gatsby cloud](https://testblogmaster.gatsbyjs.io/)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## My process
 
-3.  **Open the code and start customizing!**
+### Assumptions
 
-    Your site is now running at http://localhost:8000!
+Current development stage is: **Level 1**
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+#### Level 1:
 
-4.  **Learn more**
+- Main page
+- usage of MD files to create blog posts
+- page for eacg md file
+- start page with basic information
+- RWD with materialUI
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+#### Level 2:
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- Users comments system
+- Social links (?) - display the data from social media (?)
+- Tag system (Display by tag)
+- Unit testing
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+#### Level 3:
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- Optimization
+- CMS (develop or use some api)
+- Newsletter
+- Comment count and likes
+- SocialMedia share button
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Made with:
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- React
+- Gatsbyjs
+- MaterialUi
