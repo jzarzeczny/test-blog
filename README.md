@@ -1,11 +1,12 @@
 # Blog Psychodelikt
 
+This site has been created in order to test GatsbyJS. In addition i have decied to add css lib.
+
 ## Overview
 
 ### The challange
 
-Main idea was to create some simple blog with basic features to train GatsbyJS and try MaterialUI.
-In addition I decided to aim for features within the learning time:
+Main idea behind this project was to create a very simple blog.
 
 Current development stage is: **Level 1**
 
