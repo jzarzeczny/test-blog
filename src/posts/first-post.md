@@ -1,7 +1,7 @@
 ---
-title: First sexy post
+title: First post
 tags: First
-slug: first-sexy-post
+slug: first-post
 date: "2021-05-05"
 img: ../images/brain.jpg
 ---

@@ -1,7 +1,7 @@
 ---
-title: Second sexy post
+title: Second post
 tags: Second
-slug: second-sexy-post
+slug: second-post
 date: "2020-05-06"
 img: ../images/eggs.jpg
 ---

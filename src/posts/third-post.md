@@ -1,7 +1,7 @@
 ---
-title: Third sexy post
+title: Third post
 tags: Third
-slug: third-sexy-post
+slug: third-post
 date: "2017-05-08"
 img: ../images/people.jpg
 ---
